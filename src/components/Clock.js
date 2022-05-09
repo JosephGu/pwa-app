@@ -33,7 +33,10 @@ const Clock = () => {
         <div className="clock-container">
             <div className='mark'>
                 {
-                    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((val, idx) => <div className='number' key={val}>{val}</div>)
+                    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((val, idx) =>
+                        <div className='number' key={val} style={{'--rotation': `calc(${val} * 30deg)`}}>
+                            <div style={{transform:`rotate(calc(${val} * -30deg))`}}>{val}</div>
+                        </div>)
                 }
             </div>
 
