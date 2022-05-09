@@ -22,19 +22,19 @@ app.set('port', port);
 
 var server;
 
- if (process.env == 'production') {
-  const options = {
-    key: fs.readFileSync('/ssl/cert/joseph_key.pem'),
-    cert: fs.readFileSync('/ssl/cert/joseph.pem')
-  }
-  console.log('launch https');
-  server = https.createServer(options, app);
+//  if (process.env == 'production') {
+const options = {
+  key: fs.readFileSync('/ssl/cert/joseph_key.pem'),
+  cert: fs.readFileSync('/ssl/cert/joseph.pem')
 }
+console.log('launch https');
+server = https.createServer(options, app);
+// }
 
-else {
-  console.log('launch http');
-  server = http.createServer(app);
-}
+// else {
+//   console.log('launch http');
+//   server = http.createServer(app);
+// }
 
 
 
