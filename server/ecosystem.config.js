@@ -15,7 +15,7 @@ module.exports = {
                 NODE_ENV:'development',
                 RUN_ENV:'development'
             },
-            watch:['server'],
+            watch:['server','build'],
             ignore_watch:['node_modules'],
             cwd:'./'
         },
