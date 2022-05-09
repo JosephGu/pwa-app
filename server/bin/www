@@ -27,7 +27,7 @@ const options = {
   key: fs.readFileSync('/ssl/cert/joseph_key.pem'),
   cert: fs.readFileSync('/ssl/cert/joseph.pem')
 }
-console.log('launch https');
+console.log('launch https', port);
 server = https.createServer(options, app);
 // }
 
